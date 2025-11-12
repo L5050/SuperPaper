@@ -1,0 +1,15 @@
+{
+    "id": "spm",
+    "name": "Super Paper Balatro",
+    "author": ["Yme"],
+    "description": "A Balatro content mod inspired by the Wii classic Super Paper Mario, a 2D-3D puzzle platformer RPG",
+    "prefix": "spm",
+    "main_file": "src/spm.lua",
+    "version": "0.1.0~",
+    "priority": 0,
+    "badge_colour": "080808",
+    "badge_text_colour": "4F14A0",
+    "dependencies": [
+        "Steamodded (>=1.0.0~BETA-0827c)"
+    ]
+}
