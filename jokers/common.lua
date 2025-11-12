@@ -34,3 +34,30 @@ SMODS.Joker {
         end
     end
 }
+
+-- Merlee
+SMODS.Joker {
+    key = "merlee",
+    loc_txt = {
+        name = "Merlee",
+        text = {
+            "Played cards give", "{C:mult}+4{} Mult when scored"
+        }
+    },
+    blueprint_compat = true,
+    rarity = 1,
+    cost = 4,
+    pos = {x = 0, y = 0},
+    atlas = "SpmJokers",
+    config = { extra = { mult = 4 } },
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.mult } }
+    end,
+    calculate = function(self, card, context)
+        if context.individual and context.cardarea == G.play then
+                return {
+                    mult = card.ability.extra.mult
+                }
+        end
+    end
+}
